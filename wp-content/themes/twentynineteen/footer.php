@@ -58,8 +58,37 @@
 	  	  	"lengthChange":   false
 	  	  });
 		} );
+
+
+		ajaxurl = "<?= get_site_url(); ?>/" + 'wp-admin/admin-ajax.php';
+
+		$(document).ready(function () {
+
+			$('.search-submit-form').submit(function (e) { 
+				e.preventDefault();
+			
+				
+				var $this = $(this);
+				var submit_data = $this.serialize();
+
+				var data = {
+					action: 'get_sheet_data',
+					data: submit_data
+				}
+
+				$.post(ajaxurl, data, function(response) {
+		        	console.log(response);					
+				});
+				
+			});
+
+
+		});
+
 	</script>
 <?php wp_footer(); ?>
 
 </body>
 </html>
+
+
