@@ -1,0 +1,4 @@
+0000.000 (1) Opened log file at time: Fri, 01 Mar 2019 11:59:51 +0000 on http://clickhost.pk/naseej-forms
+0000.008 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.16.4.24 WP: 5.1 PHP: 7.0.33 (cgi-fcgi, Linux s9.tez.host 3.10.0-714.10.2.lve1.5.19.7.el7.x86_64 #1 SMP Fri Sep 28 08:37:09 EDT 2018 x86_64) MySQL: 10.2.22-MariaDB-cll-lve WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 1024M (used: 4.9M | 6M) multisite: N openssl: OpenSSL 1.0.2q  20 Nov 2018 mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.062 (1) Free space on disk containing Updraft's temporary directory: 227033.1 MB
+0000.067 (1) This backup task (542aca2ca7ce) is either complete or began over 2 days ago: ending (1551441591.4487, ) (existing jobdata keys: )

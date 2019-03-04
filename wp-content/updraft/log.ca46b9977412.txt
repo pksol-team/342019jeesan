@@ -1,0 +1,113 @@
+0000.002 () Opened log file at time: Fri, 01 Mar 2019 11:59:47 +0000 on http://clickhost.pk/naseej-forms
+0000.002 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.16.4.24 WP: 5.1 PHP: 7.0.33 (cgi-fcgi, Linux s9.tez.host 3.10.0-714.10.2.lve1.5.19.7.el7.x86_64 #1 SMP Fri Sep 28 08:37:09 EDT 2018 x86_64) MySQL: 10.2.22-MariaDB-cll-lve WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 1024M (used: 6.2M | 8M) multisite: N openssl: OpenSSL 1.0.2q  20 Nov 2018 mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.045 () Free space on disk containing Updraft's temporary directory: 227059.8 MB
+0000.064 () Restore job started. Entities to restore: plugins, themes, uploads, others, db. Restore options: {"updraft_restorer_replacesiteurl":"1","updraft_encryptionphrase":"","updraft_restorer_wpcore_includewpconfig":false,"updraft_incremental_restore_point":-1}
+0000.066 () Will not delete any archives after unpacking them, because there was no cloud storage for this backup
+0000.067 () Entity: db
+0000.067 () restore_backup(backup_file=backup_2019-03-01-1149_Naseej_form_542aca2ca7ce-db.gz, type=db, info=a:0:{}, last_one=)
+0000.067 () Unpacking backup... (backup_2019-03-01-1149_Naseej_form_542aca2ca7ce-db.gz, 0.1 Mb)
+0000.068 () Database successfully unpacked
+0000.068 () Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0000.068 () Using direct MySQL access; value of use_mysqli is: 1
+0000.080 () Max packet size: 256 MB
+0000.080 () Entering maintenance mode
+0000.080 () Enabling Maintenance mode&#8230;
+0000.081 () Backup of: http://naseej_form.test
+0000.096 () Content URL: http://naseej_form.test/wp-content
+0000.096 () Uploads URL: http://naseej_form.test/wp-content/uploads
+0000.096 () Old table prefix: wp_
+0000.096 () Site information: multisite=0
+0000.097 () New table prefix: nf_
+0000.097 () Processing table (InnoDB): wp_options - will restore as: nf_options
+0000.287 () Restoring prior UD configuration (table: nf_options; keys: 94)
+0001.111 () Table prefix has changed: changing options table field(s) accordingly (options)
+0001.119 () Options table fields changed OK
+0001.122 () Search and replacing table: nf_options: rows: 237
+0001.150 () Processing table (InnoDB): wp_users - will restore as: nf_users
+0001.199 () Search and replacing table: nf_users: rows: 1
+0001.199 () Processing table (InnoDB): wp_usermeta - will restore as: nf_usermeta
+0001.246 () Table prefix has changed: changing usermeta table field(s) accordingly
+0001.250 () Usermeta table fields changed OK
+0001.251 () Search and replacing table: nf_usermeta: rows: 18
+0001.252 () Processing table (InnoDB): wp_commentmeta - will restore as: nf_commentmeta
+0001.304 () Search and replacing table: nf_commentmeta: rows: 0
+0001.304 () Processing table (InnoDB): wp_comments - will restore as: nf_comments
+0001.368 () Search and replacing table: nf_comments: rows: 1
+0001.368 () Processing table (InnoDB): wp_links - will restore as: nf_links
+0001.402 () Search and replacing table: nf_links: rows: 0
+0001.402 () Processing table (InnoDB): wp_postmeta - will restore as: nf_postmeta
+0001.461 () Search and replacing table: nf_postmeta: rows: 0
+0001.461 () Processing table (InnoDB): wp_posts - will restore as: nf_posts
+0001.561 () Skipping search/replace on GUID column in posts table
+0001.562 () Search and replacing table: nf_posts: rows: 6
+0001.572 () Processing table (InnoDB): wp_term_relationships - will restore as: nf_term_relationships
+0001.613 () Skipping this table: data in this table (nf_term_relationships) should not be search/replaced
+0001.613 () Processing table (InnoDB): wp_term_taxonomy - will restore as: nf_term_taxonomy
+0001.656 () Search and replacing table: nf_term_taxonomy: rows: 1
+0001.656 () Processing table (InnoDB): wp_termmeta - will restore as: nf_termmeta
+0001.703 () Search and replacing table: nf_termmeta: rows: 0
+0001.703 () Processing table (InnoDB): wp_terms - will restore as: nf_terms
+0001.746 () Unlocking database and leaving maintenance mode
+0001.746 () Disabling Maintenance mode&#8230;
+0001.747 () Search and replacing table: nf_terms: rows: 1
+0001.747 () Finished: lines processed: 41 in 1.68 seconds
+0001.748 () Cleaning up rubbish...
+0001.748 () Begin search and replace (updraftplus_restored_db)
+0001.748 () [Database-replace-site-url] Database: search and replace site URL
+0001.748 () Restored pre-migration site ID for this installation
+0001.760 () Database search and replace: replace http://naseej_form.test in backup dump with http://clickhost.pk/naseej-forms
+0001.760 () Database search and replace: replace https://naseej_form.test in backup dump with http://clickhost.pk/naseej-forms
+0001.760 () Search and replacing table: nf_commentmeta: already done
+0001.760 () Search and replacing table: nf_comments: already done
+0001.760 () Search and replacing table: nf_links: already done
+0001.761 () Search and replacing table: nf_options: already done
+0001.761 () Search and replacing table: nf_postmeta: already done
+0001.761 () Search and replacing table: nf_posts: already done
+0001.761 () Search and replacing table: nf_term_relationships: already done
+0001.761 () Search and replacing table: nf_term_taxonomy: already done
+0001.761 () Search and replacing table: nf_termmeta: already done
+0001.761 () Search and replacing table: nf_terms: already done
+0001.761 () Search and replacing table: nf_usermeta: already done
+0001.761 () Search and replacing table: nf_users: already done
+0001.794 () Entity: plugins
+0001.794 () restore_backup(backup_file=backup_2019-03-01-1149_Naseej_form_542aca2ca7ce-plugins.zip, type=plugins, info=a:2:{s:4:"path";s:59:"/home2/clickhos/public_html/naseej-forms/wp-content/plugins";s:11:"description";s:7:"Plugins";}, last_one=)
+0001.794 () Unpacking backup... (backup_2019-03-01-1149_Naseej_form_542aca2ca7ce-plugins.zip, 4.7 Mb)
+0001.795 () Unzipping backup_2019-03-01-1149_Naseej_form_542aca2ca7ce-plugins.zip to /home2/clickhos/public_html/naseej-forms/wp-content/upgrade/b62669a9/ using UpdraftPlus_ZipArchive
+0001.916 () Unzip progress: 1002 out of 1947 files (13.3 MB, plugins/updraftplus/vendor/aws/aws-sdk-php/src/Aws/Iam/Exception/NoSuchEntityException.php)
+0001.991 () Unzip progress: 1947 out of 1947 files (17.9 MB, plugins/updraftplus/vendor/yahnis-elsts/plugin-update-checker/vendor/readme-parser.php)
+0001.992 () Moving old data: filesystem method / updraft_dir is potentially possible
+0001.992 () Moving old data: can potentially use wp_filesystem method / -old
+0001.992 () Moving old data out of the way...
+0002.025 () Top-level entities being moved: updraftplus, hello.php, index.php, akismet
+0002.026 () Moving unpacked backup into place...
+0002.061 () Top-level entities being moved: updraftplus, hello.php, index.php, akismet
+0002.061 () Cleaning up rubbish...
+0002.071 () Entity: themes
+0002.071 () restore_backup(backup_file=backup_2019-03-01-1149_Naseej_form_542aca2ca7ce-themes.zip, type=themes, info=a:2:{s:4:"path";s:58:"/home2/clickhos/public_html/naseej-forms/wp-content/themes";s:11:"description";s:6:"Themes";}, last_one=)
+0002.071 () Unpacking backup... (backup_2019-03-01-1149_Naseej_form_542aca2ca7ce-themes.zip, 1.9 Mb)
+0002.072 () Unzipping backup_2019-03-01-1149_Naseej_form_542aca2ca7ce-themes.zip to /home2/clickhos/public_html/naseej-forms/wp-content/upgrade/50ed6a00/ using UpdraftPlus_ZipArchive
+0002.108 () Unzip progress: 243 out of 243 files (3.1 MB, themes/twentysixteen/template-parts/content.php)
+0002.108 () Moving old data: filesystem method / updraft_dir is potentially possible
+0002.108 () Moving old data: can potentially use wp_filesystem method / -old
+0002.109 () Moving old data out of the way...
+0002.113 () Top-level entities being moved: twentyseventeen, twentynineteen, twentysixteen, index.php
+0002.113 () Moving unpacked backup into place...
+0002.118 () Top-level entities being moved: twentyseventeen, twentynineteen, twentysixteen, index.php
+0002.118 () Cleaning up rubbish...
+0002.134 () Entity: uploads
+0002.134 () restore_backup(backup_file=backup_2019-03-01-1149_Naseej_form_542aca2ca7ce-uploads.zip, type=uploads, info=a:2:{s:4:"path";s:59:"/home2/clickhos/public_html/naseej-forms/wp-content/uploads";s:11:"description";s:7:"Uploads";}, last_one=)
+0002.134 () Unpacking backup... (backup_2019-03-01-1149_Naseej_form_542aca2ca7ce-uploads.zip, 0 Mb)
+0002.134 () Unzipping backup_2019-03-01-1149_Naseej_form_542aca2ca7ce-uploads.zip to /home2/clickhos/public_html/naseej-forms/wp-content/upgrade/b8e75645/ using UpdraftPlus_ZipArchive
+0002.134 () Moving old data: filesystem method / updraft_dir is potentially possible
+0002.134 () Moving old data: can potentially use wp_filesystem method / -old
+0002.134 () Moving old data out of the way...
+0002.135 () Moving unpacked backup into place...
+0002.135 () Cleaning up rubbish...
+0002.144 () Entity: others
+0002.144 () restore_backup(backup_file=backup_2019-03-01-1149_Naseej_form_542aca2ca7ce-others.zip, type=others, info=a:2:{s:4:"path";s:51:"/home2/clickhos/public_html/naseej-forms/wp-content";s:11:"description";s:6:"Others";}, last_one=1)
+0002.144 () Unpacking backup... (backup_2019-03-01-1149_Naseej_form_542aca2ca7ce-others.zip, 0 Mb)
+0002.144 () Unzipping backup_2019-03-01-1149_Naseej_form_542aca2ca7ce-others.zip to /home2/clickhos/public_html/naseej-forms/wp-content/upgrade/227d79a1/ using UpdraftPlus_ZipArchive
+0002.149 () Unzip progress: 1 out of 1 files (28 B, index.php)
+0002.150 () Cleaning up rubbish...
+0002.169 () Restore successful!
+0002.169 () Restore successful

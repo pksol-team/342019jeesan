@@ -1,0 +1,126 @@
+a#example_previous {
+    display: none;
+}
+
+a#example_next {
+    display: none;
+}
+div#example_info {
+    display: none;
+}
+div#example_paginate {
+    float: left;
+    background: #f4f4f4;
+    font-size: 12px;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0px;
+}
+tr.odd {
+    background-color: #fff !important;
+    color: #222222;
+}
+tr.even {
+    color: #222222;
+}
+a.paginate_button.current {
+    background: transparent !important;
+    border: none !important;
+}
+a.paginate_button {
+    background: transparent !important;
+    border: none !important;
+}
+tr.odd:hover {
+    background: #ab272c !important;
+    color: white;
+}
+tr.even:hover {
+    background: #ab272c !important;
+    color: white;
+}
+input.btn.btn-primary {
+    padding: 0.7rem 3.5rem;
+    background-color: #ab272c;
+    border: 1px solid #ab272c;
+    border-radius: 5px;
+}
+button.btn.btn-primary{
+	min-width: 15%;
+    padding: 0.5rem 2.2rem;
+    margin-right: 15px;
+    background-color: #ab272c;
+    border: 1px solid #ab272c;
+    border-radius: 5px;
+}
+input#name:hover {
+    border: 1px solid #ab272c;
+}
+input#phone:hover {
+    border: 1px solid #ab272c;
+}
+input#email:hover {
+    border: 1px solid #ab272c;
+}
+input#institution:hover {
+    border: 1px solid #ab272c;
+}
+select#countries:hover {
+    border: 1px solid #ab272c;
+}
+select#subject:hover {
+    border: 1px solid #ab272c;
+}
+textarea#notes:hover {
+    border: 1px solid #ab272c;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.3em + .55rem + 0px) !important;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    box-shadow: 1px 3px #d6d0d0;
+}
+p {
+    margin-top: 20px;
+    margin-bottom: 1rem;
+    font-size: 17px;
+}
+table.dataTable thead th, table.dataTable thead td{
+	border-bottom: 1px solid #ddd !important;
+}
+table#example {
+    border-bottom: none;
+}
+a#sel{
+	color: #ab272c;
+}
+textarea {
+    overflow: auto;
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button.current{
+	color: #ab272c !important;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+	color: #b7b7b7 !important; 
+}
+table td, table th {
+    border: none !important;
+}
+a#sel:hover {
+    color: white !important;
+}
+textarea.form-control {
+    height: auto !important;
+}

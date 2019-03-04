@@ -1,0 +1,132 @@
+0000.000 (0) Opened log file at time: Sun, 03 Mar 2019 06:43:22 +0000 on http://clickhost.pk/naseej-forms
+0000.009 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.16.4.24 WP: 5.1 PHP: 7.0.33 (cgi-fcgi, Linux s9.tez.host 3.10.0-714.10.2.lve1.5.19.7.el7.x86_64 #1 SMP Fri Sep 28 08:37:09 EDT 2018 x86_64) MySQL: 10.2.22-MariaDB-cll-lve WPLANG: en_US Server: Apache safe_mode: 0 max_execution_time: 900 memory_limit: 1024M (used: 5.3M | 8M) multisite: N openssl: OpenSSL 1.0.2q  20 Nov 2018 mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.050 (0) Free space on disk containing Updraft's temporary directory: 224455.5 MB
+0000.059 (0) Tasks: Backup files: 1 (schedule: daily) Backup DB:  (schedule: daily)
+0000.063 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0000.073 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1551524545, seconds_ago=70857)
+0000.090 (0) Set semaphore last lock (fd) time to 2019-03-03 06:43:22
+0000.094 (0) Semaphore lock (fd) complete
+0000.116 (0) Backup run: resumption=0, nonce=42e91a3219e6, file_nonce=42e91a3219e6 begun at=1551595402 (0s ago), job type=backup
+0000.133 (0) Scheduling a resumption (1) after 300 seconds (1551595702) in case this run gets aborted
+0000.153 (0) Checking if we have a zip executable available
+0000.159 (0) Testing: /usr/bin/zip
+0000.166 (0) Output: zip warning: binziptest/test.zip not found or empty
+0000.172 (0) Output: adding: binziptest/subdir1/	(in=0) (out=0) (stored 0%)
+0000.177 (0) Output: adding: binziptest/subdir1/subdir2/	(in=0) (out=0) (stored 0%)
+0000.181 (0) Output: adding: binziptest/subdir1/subdir2/test.html	(in=131) (out=107) (deflated 18%)
+0000.185 (0) Output: total bytes=131, compressed=107 -> 18% savings
+0000.195 (0) Output: adding: binziptest/subdir1/subdir2/test2.html	(in=138) (out=113) (deflated 18%)
+0000.200 (0) Output: total bytes=269, compressed=220 -> 18% savings
+0000.213 (0) Working binary zip found: /usr/bin/zip
+0000.234 (0) Zip engine: found/will use a binary zip: /usr/bin/zip
+0000.250 (0) Creation of backups of directories: beginning
+0000.265 (0) No backup of plugins: excluded by user's options
+0000.275 (0) No backup of themes: excluded by user's options
+0000.280 (0) No backup of uploads: excluded by user's options
+0000.284 (0) No backup of wpcore: excluded by user's options
+0000.288 (0) No backup of others: excluded by user's options
+0000.292 (0) No backup of more: excluded by user's options
+0000.316 (0) Saving backup status to database (elements: 0)
+0000.330 (0) Beginning creation of database dump (WordPress DB)
+0000.338 (0) Testing potential mysqldump binary: /usr/bin/mysqldump
+0000.353 (0) Output: /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;\n/*!40103 SET TIME_ZONE='+00:00' */;\n/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;\n/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;\n/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;\n/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;\nDROP TABLE IF EXISTS `nf_options`;\n/*!40101 SET @saved_cs_client     = @@character_set_client */;\n/*!40101 SET character_set_client = utf8 */;\nCRE (truncated - 1200 bytes total)
+0000.358 (0) Working binary mysqldump found: /usr/bin/mysqldump
+0000.382 (0) Table nf_options: Total expected rows (approximate): 220
+0000.389 (0) Table nf_options: Total rows added: 219 in 0.00 seconds
+0000.394 (0) Table nf_options: finishing file (backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_options.table.gz - 6.6 KB)
+0000.412 (0) Table nf_users: Total expected rows (approximate): 0
+0000.417 (0) Table nf_users: Total rows added: 1 in 0.00 seconds
+0000.425 (0) Table nf_users: finishing file (backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_users.table.gz - 0.5 KB)
+0000.441 (0) Table nf_usermeta: Total expected rows (approximate): 18
+0000.446 (0) Table nf_usermeta: Total rows added: 18 in 0.00 seconds
+0000.450 (0) Table nf_usermeta: finishing file (backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_usermeta.table.gz - 1 KB)
+0000.463 (0) Table nf_commentmeta: Total expected rows (approximate): 0
+0000.468 (0) Table nf_commentmeta: Total rows added: 0 in 0.00 seconds
+0000.476 (0) Table nf_commentmeta: finishing file (backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_commentmeta.table.gz - 0.4 KB)
+0000.493 (0) Table nf_comments: Total expected rows (approximate): 0
+0000.498 (0) Table nf_comments: Total rows added: 1 in 0.00 seconds
+0000.503 (0) Table nf_comments: finishing file (backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_comments.table.gz - 0.7 KB)
+0000.516 (0) Table nf_links: Total expected rows (approximate): 0
+0000.521 (0) Table nf_links: Total rows added: 0 in 0.00 seconds
+0000.525 (0) Table nf_links: finishing file (backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_links.table.gz - 0.4 KB)
+0000.538 (0) Table nf_postmeta: Total expected rows (approximate): 4
+0000.543 (0) Table nf_postmeta: Total rows added: 4 in 0.00 seconds
+0000.550 (0) Table nf_postmeta: finishing file (backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_postmeta.table.gz - 0.5 KB)
+0000.583 (0) Table nf_posts: Total expected rows (approximate): 6
+0000.592 (0) Table nf_posts: Total rows added: 6 in 0.00 seconds
+0000.600 (0) Table nf_posts: finishing file (backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_posts.table.gz - 3.2 KB)
+0000.617 (0) Table nf_term_relationships: Total expected rows (approximate): 0
+0000.626 (0) Table nf_term_relationships: Total rows added: 1 in 0.00 seconds
+0000.632 (0) Table nf_term_relationships: finishing file (backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_term_relationships.table.gz - 0.3 KB)
+0000.653 (0) Table nf_term_taxonomy: Total expected rows (approximate): 0
+0000.658 (0) Table nf_term_taxonomy: Total rows added: 1 in 0.00 seconds
+0000.663 (0) Table nf_term_taxonomy: finishing file (backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_term_taxonomy.table.gz - 0.4 KB)
+0000.676 (0) Table nf_termmeta: Total expected rows (approximate): 0
+0000.681 (0) Table nf_termmeta: Total rows added: 0 in 0.00 seconds
+0000.693 (0) Table nf_termmeta: finishing file (backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_termmeta.table.gz - 0.4 KB)
+0000.717 (0) Table nf_terms: Total expected rows (approximate): 0
+0000.722 (0) Table nf_terms: Total rows added: 1 in 0.00 seconds
+0000.727 (0) Table nf_terms: finishing file (backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_terms.table.gz - 0.4 KB)
+0000.736 (0) Skipping table (lacks our prefix (nf_)): wp0g_commentmeta
+0000.740 (0) Skipping table (lacks our prefix (nf_)): wp0g_comments
+0000.745 (0) Skipping table (lacks our prefix (nf_)): wp0g_layerslider
+0000.749 (0) Skipping table (lacks our prefix (nf_)): wp0g_layerslider_revisions
+0000.758 (0) Skipping table (lacks our prefix (nf_)): wp0g_links
+0000.763 (0) Skipping table (lacks our prefix (nf_)): wp0g_options
+0000.767 (0) Skipping table (lacks our prefix (nf_)): wp0g_postmeta
+0000.771 (0) Skipping table (lacks our prefix (nf_)): wp0g_posts
+0000.775 (0) Skipping table (lacks our prefix (nf_)): wp0g_revslider_css
+0000.779 (0) Skipping table (lacks our prefix (nf_)): wp0g_revslider_layer_animations
+0000.784 (0) Skipping table (lacks our prefix (nf_)): wp0g_revslider_navigations
+0000.793 (0) Skipping table (lacks our prefix (nf_)): wp0g_revslider_sliders
+0000.797 (0) Skipping table (lacks our prefix (nf_)): wp0g_revslider_slides
+0000.801 (0) Skipping table (lacks our prefix (nf_)): wp0g_revslider_static_slides
+0000.806 (0) Skipping table (lacks our prefix (nf_)): wp0g_term_relationships
+0000.814 (0) Skipping table (lacks our prefix (nf_)): wp0g_term_taxonomy
+0000.819 (0) Skipping table (lacks our prefix (nf_)): wp0g_termmeta
+0000.823 (0) Skipping table (lacks our prefix (nf_)): wp0g_terms
+0000.827 (0) Skipping table (lacks our prefix (nf_)): wp0g_usermeta
+0000.836 (0) Skipping table (lacks our prefix (nf_)): wp0g_users
+0000.843 (0) Skipping table (lacks our prefix (nf_)): wp0g_wc_download_log
+0000.847 (0) Skipping table (lacks our prefix (nf_)): wp0g_wc_webhooks
+0000.851 (0) Skipping table (lacks our prefix (nf_)): wp0g_woocommerce_api_keys
+0000.863 (0) Skipping table (lacks our prefix (nf_)): wp0g_woocommerce_attribute_taxonomies
+0000.872 (0) Skipping table (lacks our prefix (nf_)): wp0g_woocommerce_downloadable_product_permissions
+0000.880 (0) Skipping table (lacks our prefix (nf_)): wp0g_woocommerce_log
+0000.891 (0) Skipping table (lacks our prefix (nf_)): wp0g_woocommerce_order_itemmeta
+0000.895 (0) Skipping table (lacks our prefix (nf_)): wp0g_woocommerce_order_items
+0000.900 (0) Skipping table (lacks our prefix (nf_)): wp0g_woocommerce_payment_tokenmeta
+0000.904 (0) Skipping table (lacks our prefix (nf_)): wp0g_woocommerce_payment_tokens
+0000.909 (0) Skipping table (lacks our prefix (nf_)): wp0g_woocommerce_sessions
+0000.913 (0) Skipping table (lacks our prefix (nf_)): wp0g_woocommerce_shipping_zone_locations
+0000.917 (0) Skipping table (lacks our prefix (nf_)): wp0g_woocommerce_shipping_zone_methods
+0000.921 (0) Skipping table (lacks our prefix (nf_)): wp0g_woocommerce_shipping_zones
+0000.925 (0) Skipping table (lacks our prefix (nf_)): wp0g_woocommerce_tax_rate_locations
+0000.930 (0) Skipping table (lacks our prefix (nf_)): wp0g_woocommerce_tax_rates
+0000.939 (0) backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_options.table.gz (1/48): adding to final database dump
+0000.944 (0) backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_users.table.gz (2/48): adding to final database dump
+0000.948 (0) backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_usermeta.table.gz (3/48): adding to final database dump
+0000.953 (0) backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_commentmeta.table.gz (4/48): adding to final database dump
+0000.957 (0) backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_comments.table.gz (5/48): adding to final database dump
+0000.961 (0) backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_links.table.gz (6/48): adding to final database dump
+0000.968 (0) backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_postmeta.table.gz (7/48): adding to final database dump
+0000.977 (0) backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_posts.table.gz (8/48): adding to final database dump
+0000.990 (0) backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_term_relationships.table.gz (9/48): adding to final database dump
+0000.996 (0) backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_term_taxonomy.table.gz (10/48): adding to final database dump
+0001.001 (0) backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_termmeta.table.gz (11/48): adding to final database dump
+0001.005 (0) backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db-table-nf_terms.table.gz (12/48): adding to final database dump
+0001.010 (0) backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db.gz: finished writing out complete database file (0 KB)
+0001.056 (0) Total database tables backed up: 12 (backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db.gz, size: 11977, sha256)
+0001.083 (0) backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db.gz: db: This file has not yet been successfully uploaded: will queue
+0001.087 (0) Saving backup history. Total backup size: 11.7 KB
+0001.097 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0001.112 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0001.117 (0) No remote despatch: user chose no remote backup service
+0001.122 (0) Recording as successfully uploaded: backup_2019-03-03-0643_Naseej_form_42e91a3219e6-db.gz
+0001.133 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0001.142 (0) Resume backup (42e91a3219e6, 0): finish run
+0001.160 (0) Decremented the semaphore (fd) by 1
+0001.169 (0) Semaphore (fd) unlocked
+0001.175 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0001.189 (0) No email will/can be sent - the user has not configured an email address.
+0001.194 (0) The backup apparently succeeded and is now complete
