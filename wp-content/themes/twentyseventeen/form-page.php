@@ -108,24 +108,6 @@ $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
 			            <th scope="col">&nbsp;</th>
 		            </tr>
 		        </thead>
-		        <tbody>
-		            <tr>
-		                <td>Tiger Nixon</td>
-		                <td>System Architect</td>
-		                <td>Edinburgh</td>
-		                <td>61</td>
-		                <td>2011/04/25</td>
-		                <td><a id="sel" href="">Select</a></td>
-		            </tr>
-		            <tr>
-		                <td>Garrett Winters</td>
-		                <td>Accountant</td>
-		                <td>Tokyo</td>
-		                <td>63</td>
-		                <td>2011/07/25</td>
-		                <td><a id="sel" href="">Select</a></td>
-		            </tr>
-		        </tbody>
 		    </table>
 		</div>
 

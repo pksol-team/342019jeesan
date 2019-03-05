@@ -662,3 +662,86 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+
+
+
+
+
+
+
+$mainRootDirectory = dirname(dirname(dirname(get_template_directory())));
+require $mainRootDirectory.DIRECTORY_SEPARATOR.'vendor/autoload.php';
+$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+
+
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+
+add_action( 'wp_ajax_nopriv_get_sheet_data', 'get_sheet_data' );
+add_action( 'wp_ajax_get_sheet_data', 'get_sheet_data' );
+
+function get_sheet_data() { 
+	
+	// get the country and subject
+	$data = $_POST['data'];
+	$posted_country = urldecode($data['countries']);
+	$posted_subject = urldecode($data['subject']);
+	
+	// initialize phpspreadsheet
+	$mainRootDirectory = dirname(dirname(dirname(get_template_directory())));
+	$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+
+	// get the vendor by country
+	$vendor_file = $mainRootDirectory.DIRECTORY_SEPARATOR.'Naseej Databases'.DIRECTORY_SEPARATOR.'Vendors Countries.xlsx';
+	$spreadsheet_vendor = $reader->load($vendor_file);
+	$sheet_vendor = $spreadsheet_vendor->getSheet(0);
+	$sheetData_vendor = $sheet_vendor->toArray(null, true, true, true);
+
+	$vendor = [];
+
+	foreach ($sheetData_vendor as $key => $single_vendor) {
+		if ($single_vendor['A'] == $posted_country) {
+
+			array_push($vendor, $single_vendor['B']);
+		}
+	}
+
+
+	$database_file = $mainRootDirectory.DIRECTORY_SEPARATOR.'Naseej Databases'.DIRECTORY_SEPARATOR.'Databases.xlsx';
+	$spreadsheet_database = $reader->load($database_file);
+	$sheet_database = $spreadsheet_database->getSheet(0);
+	$sheetData_database = $sheet_database->toArray(null, true, true, true);
+
+	$dataIndex = 1;
+
+	$table_data = '';
+
+	foreach ($sheetData_database as $key => $products) {
+
+		$dataIndex++;
+
+		if (in_array($products['E'], $vendor) && $products['F'] == $posted_subject) {
+			$table_data .= '
+			<tr>
+				<td>'.$dataIndex.'</td>
+				<td>'.$products['E'].'</td>
+				<td>'.$products['C'].'</td>
+				<td>'.$products['A'].'</td>
+				<td>'.$products['D'].'</td>
+				<td><a id="sel" href="">Select</a></td>
+			</tr>';
+		}
+	
+	}
+
+	echo $table_data;
+
+	die();
+
+}
+
+
+
+
+

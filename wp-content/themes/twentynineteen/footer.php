@@ -77,10 +77,6 @@
 				var paramName = a[0];
 				var paramValue = typeof (a[1]) === 'undefined' ? true : a[1];
 
-				// (optional) keep case consistent
-				paramName = paramName.toLowerCase();
-				if (typeof paramValue === 'string') paramValue = paramValue.toLowerCase();
-
 				// if the paramName ends with square brackets, e.g. colors[] or colors[2]
 				if (paramName.match(/\[(\d+)?\]$/)) {
 
@@ -119,12 +115,14 @@
 
 
 		$(document).ready(function() {
-	  	  $('#example').DataTable({
-	  	  	searching: false,
-	  	  	ordering:  false,
-	  	  	"lengthChange":   false
-	  	  });
-		} );
+			
+			// $('#example').DataTable({
+			// 	searching: false,
+			// 	ordering:  false,
+			// 	"lengthChange":   false
+			// });
+			
+		});
 
 
 		ajaxurl = "<?= get_site_url(); ?>/" + 'wp-admin/admin-ajax.php';
@@ -160,7 +158,7 @@
 					}
 
 					$.post(ajaxurl, data, function(response) {
-						console.log(response);					
+						$(response).appendTo('#example');
 					});
 					
 				} else {

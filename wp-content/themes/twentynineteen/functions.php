@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Twenty Nineteen functions and definitions
  *
@@ -321,29 +322,6 @@ require get_template_directory() . '/inc/template-tags.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-
-
-
-
-
-// require_once get_stylesheet_directory(). DIRECTORY_SEPARATOR.'phpExcelReader'.DIRECTORY_SEPARATOR.'Excel'.DIRECTORY_SEPARATOR.'reader.php';
-
-
-add_action( 'wp_ajax_nopriv_get_sheet_data', 'get_sheet_data' );
-add_action( 'wp_ajax_get_sheet_data', 'get_sheet_data' );
-
-function get_sheet_data() { 
-
-	$data = $_POST['data'];
-	var_dump($data);
-
-
-
-	die();
-
-}
-
 
 
 
