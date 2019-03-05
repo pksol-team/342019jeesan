@@ -181,8 +181,82 @@
 				
 			});
 
+			$(document).on('click', '.sel', function (e) {
+
+				e.preventDefault();
+
+				var $this = $(this);
+
+				if (!$this.hasClass('selected-row')) {
+					
+					$this.addClass('selected-row');
+					
+					var row = $this.closest('tr');
+					var code = row.find('.index-row').text();
+					var vendor = row.find('.vendor-row').text();
+					var name = row.find('.product-name-row').text();
+					var deleteLink = '<a href="#" class="delete-row">Delete</a>';
+
+					var appendRow = '<tr class="selected_data_row_" style="display: none; " data-code="'+code+'"><td>'+code+'</td><td>'+vendor+'</td><td>'+name+'</td><td>'+deleteLink+'</td></tr>';
+					var appended_row = $(appendRow).appendTo('.selected_data table');
+					appended_row.fadeIn();
+					
+				
+					$('.selected_data').slideDown('fast', function() {
+						$('.filter_contactform').show();
+					});
+
+				}
+
+
+
+
+			});
+
+
+			$(document).on('click', '.delete-row', function (e) {
+				e.preventDefault();
+				if (confirm('Are you sure you want to delete this product?')) {
+					
+
+					var $this = $(this);
+					var $this_tr = $this.closest('tr');
+					var $this_tr_id = $this_tr.attr('data-code');
+
+					$this_tr.closest('tr').fadeOut( "fast", function() {
+
+						$this_tr.closest('tr').remove();
+						
+						$('[data-code="'+$this_tr_id+'"]').find('.selected-row').removeClass('selected-row');
+						
+						if($('.selected_data tr').length == 1) {
+
+							$('.filter_contactform, .selected_data').slideUp();
+
+						}
+
+					});
+
+					
+
+				}
+			});
+
+
+			$('#cancel-form').click(function (e) { 
+				e.preventDefault();
+
+				$('.filter_search, .filter_sheet_data, .selected_data, .filter_contactform').slideUp();
+				$('<div class="alert alert-success">Thank you the operation has been canceled</div>').appendTo('.knowledge');
+
+			});
+
+			
+
+
 
 		});
+		
 
 	</script>
 

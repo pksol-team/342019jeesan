@@ -723,20 +723,19 @@ function get_sheet_data() {
 
 		if (in_array($products['E'], $vendor) && $products['F'] == $posted_subject) {
 			$table_data .= '
-			<tr class="dynamic_data">
-				<td>'.$dataIndex.'</td>
-				<td>'.$products['E'].'</td>
-				<td>'.$products['C'].'</td>
-				<td>'.$products['A'].'</td>
-				<td>'.$products['D'].'</td>
-				<td><a id="sel" href="">Select</a></td>
+			<tr class="dynamic_data" data-code="'.$dataIndex.'">
+				<td class="index-row">'.$dataIndex.'</td>
+				<td class="vendor-row">'.$products['E'].'</td>
+				<td class="format-row">'.$products['C'].'</td>
+				<td class="product-name-row">'.$products['A'].'</td>
+				<td class="type-row">'.$products['D'].'</td>
+				<td class="select-row"><a class="sel" href="">Select</a></td>
 			</tr>';
 		}
 	
 	}
 
 	echo $table_data;
-
 	die();
 
 }

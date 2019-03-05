@@ -19,8 +19,20 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
 
 
+
 ?>
 	<div class="container">
+
+		<div class="knowledge">
+			<p>Naseej provides Knowledge organizations with the most renowned and best specialized databases in the world.  </p>
+			<p>To get access to the databases, please use the below form:</p>
+
+			
+
+		</div>
+
+		<br><br>
+
 		<div class="filter_search">
 			<form class="search-submit-form">
 				<div class="form-row">
@@ -106,7 +118,7 @@ $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
 		        <thead>
 		        	<tr>
 			            <th scope="col">Code</th>
-			            <th scope="col">Format</th>
+			            <th scope="col">Vendor</th>
 			            <th scope="col">Format</th>
 			            <th scope="col">Product Name</th>
 			            <th scope="col">Type</th>
@@ -116,29 +128,50 @@ $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
 		    </table>
 		</div>
 
+		<div class="selected_data">
+
+			<br>
+			<h5>Selected Resources</h5>
+
+			<table class="display" style="width:100%">
+		        <thead>
+		        	<tr>
+			            <th scope="col">Code</th>
+			            <th scope="col">Vendor</th>
+			            <th scope="col">Product Name</th>
+			            <th scope="col">&nbsp;</th>
+		          </tr>
+						</thead>
+
+
+
+				</table>
+		</div>
+
+
 		<div class="filter_contactform">
-			<form>
+			<form class="contact-form-naseej">
 				<div class="form-row">
 					<p>Please Fill in your details to send the request:</p>
 				    <div class="form-group col-lg-12">
-				    	<label for="name">Full Name</label>
+				    	<label for="name">Full Name <span class="required-field">*</span> </label>
 				      	<input type="name" class="form-control" id="name">
 				    </div>
 				    <div class="form-group col-lg-6">
-				      	<label for="phone">Phone</label>
+				      	<label for="phone">Phone <span class="required-field">*</span> </label>
 				      	<input type="tel" class="form-control" id="phone">
 				    </div>
 				  <div class="form-group col-lg-6">
-				    	<label for="email">Email</label>
+				    	<label for="email">Email <span class="required-field">*</span> </label>
 				    	<input type="email" class="form-control" id="email">
 				  </div>
 				  <div class="form-group col-lg-6">
-				    	<label for="institution">Institution</label>
+				    	<label for="institution">Institution <span class="required-field">*</span></label>
 				    	<input type="text" class="form-control" id="institution">
 				  </div>
 				    <div class="form-group col-lg-6">
 					  	<div class="form-group">
-					    	<label for="country">Country</label>
+					    	<label for="country">Country <span class="required-field">*</span></label>
 					    	<select id="countries" class="form-control">
 								<option value="-1">-- Select --</option>
 								<option value="3">Saudi Arabia</option>
@@ -168,7 +201,7 @@ $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
 				    	<textarea id="notes" class="form-control"></textarea>
 				  </div>
 				  	<button type="submit" class="btn btn-primary">Send Request</button>
-				  	<button type="submit" class="btn btn-primary">Cancel</button>
+				  	<button type="button" id="cancel-form" class="btn btn-primary">Cancel</button>
 
 				  </div>
 				</form>

@@ -38,7 +38,7 @@ a.paginate_button {
     border: none !important;
 }
 
-tr.odd:hover {
+tr.odd:hover, .selected_data table tr.selected_data_row_:hover {
     background: #ab272c !important;
     color: white;
 }
@@ -121,7 +121,7 @@ table#example {
     border-bottom: none;
 }
 
-#sel {
+.sel {
     color: #ab272c;
     text-decoration: underline;
 }
@@ -146,7 +146,7 @@ table td, table th {
     border: none !important;
 }
 
-a#sel:hover {
+a.sel:hover {
     color: white !important;
 }
 
@@ -206,7 +206,7 @@ textarea.form-control {
     }
 }
 
-.naseej-loader, .filter_contactform {
+.naseej-loader, .filter_contactform, .selected_data {
     display: none;
 }
 
@@ -218,6 +218,18 @@ textarea.form-control {
     padding: 8px 10px !important;
 }
 
-.dynamic_data:hover a#sel {
+.dynamic_data:hover a.sel {
     color: white;
+}
+
+.delete-row {
+    color: #ab272c !important;
+}
+
+.selected_data table tr:hover a {
+    color: white !important;
+}
+
+.selected_data table th, .selected_data table td {
+    padding: 8px 10px;
 }
