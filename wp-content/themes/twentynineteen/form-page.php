@@ -9,6 +9,16 @@ get_header( 'about' );
 else:
 get_header();
 endif;
+
+$mainRootDirectory = dirname(dirname(dirname(get_template_directory())));
+
+require $mainRootDirectory.DIRECTORY_SEPARATOR.'vendor/autoload.php';
+
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+
+
 ?>
 	<div class="container">
 		<div class="filter_search">
@@ -17,28 +27,29 @@ endif;
 					<!-- COUNTRY -->
 					<div class="form-group col-lg-6">
 						  	<div class="form-group">
-						    	<label for="country">Country</label>
+						    	<label for="country">Country <span class="required-field">*</span> </label>
+								<?php 
+									$countries_file = $mainRootDirectory.DIRECTORY_SEPARATOR.'Naseej Databases'.DIRECTORY_SEPARATOR.'Countries.xlsx';
+									$spreadsheet_country = $reader->load($countries_file);
+									$sheet_country = $spreadsheet_country->getSheet(0);
+									$sheetData_country = $sheet_country->toArray(null, true, true, true);
+									
+
+									$countries_string = '';
+									$country_index = 0;
+									foreach ($sheetData_country as $key => $single_country) {
+										
+										if ($country_index != 0) {
+											$countries_string .= '<option value="'.$single_country['B'].'">'.$single_country['B'].'</option>';	
+										}
+										
+										$country_index++;
+									}
+
+								?>
 						    	<select id="countries" class="form-control" name="countries">
 									<option value="-1">-- Select --</option>
-									<option value="3">Saudi Arabia</option>
-									<option value="4">Bahrain</option>
-									<option value="5">Qatar</option>
-									<option value="6">United Arab Emirates</option>
-									<option value="7">Oman</option>
-									<option value="8">Sudan</option>
-									<option value="9">Lebanon</option>
-									<option value="10">Jordan</option>
-									<option value="11">Syria</option>
-									<option value="12">Egypt</option>
-									<option value="13">Iran</option>
-									<option value="14">Iraq</option>
-									<option value="15">Turkey</option>
-									<option value="16">Libya</option>
-									<option value="17">Morocco</option>
-									<option value="18">Tunisia</option>
-									<option value="19">Algeria</option>
-									<option value="20">Yemen</option>
-									<option value="21">Kuwait</option>
+									<?= $countries_string; ?>
 								</select>
 						 	</div>
 					</div>
@@ -47,29 +58,30 @@ endif;
 
 					<div class="form-group col-lg-6">
 							<div class="form-group">
-							    <label for="subject">Subject</label>
+							    <label for="subject">Subject <span class="required-field">*</span></label>
+								<?php 
+									
+									$subjects_file = $mainRootDirectory.DIRECTORY_SEPARATOR.'Naseej Databases'.DIRECTORY_SEPARATOR.'Subjects.xlsx';
+									$spreadsheet_subjects = $reader->load($subjects_file);
+									$sheet_subjects = $spreadsheet_subjects->getSheet(0);
+									$sheetData_subjects = $sheet_subjects->toArray(null, true, true, true);
+									
+
+									$subject_string = '';
+									$subject_index = 0;
+									foreach ($sheetData_subjects as $key => $single_subject) {
+										
+										if ($subject_index != 0) {
+											$subject_string .= '<option value="'.$single_subject['A'].'">'.$single_subject['A'].'</option>';	
+										}
+										
+										$subject_index++;
+									}
+
+								?>
 							    <select id="subject" class="form-control" name="subject">
 									<option value="-1">-- Select --</option>
-									<option value="3">Agriculture (Plants, Food &amp; Animals)</option>
-									<option value="4">Applied Science</option>
-									<option value="5">Arts &amp; Humanities</option>
-									<option value="6">Business &amp; Commerce</option>
-									<option value="7">Computer Science &amp; Technology</option>
-									<option value="8">Dentistry</option>
-									<option value="9">Education</option>
-									<option value="10">Engineering</option>
-									<option value="11">Fine Arts &amp; Music</option>
-									<option value="12">Information References &amp; Tools</option>
-									<option value="13">Language &amp; Linguistics</option>
-									<option value="14">Law</option>
-									<option value="15">Library &amp; Information Science</option>
-									<option value="16">Medicine &amp; Health</option>
-									<option value="17">Military</option>
-									<option value="18">Multi-Discipline</option>
-									<option value="19">Nursing</option>
-									<option value="20">Pharmaceuticals</option>
-									<option value="21">Tourism - Leisure &amp; Recreation</option>
-									<option value="22">{ --Select-- }</option>
+									<?= $subject_string; ?>
 								</select>
 						  	</div>
 					</div>
@@ -82,7 +94,7 @@ endif;
 		<div class="filter_sheet_data">
 			<div class="row">
 				<div class="col-lg-12">
-					<small>For Trial request and pricing information please click <a id="sel" href="">"Select"</a> next any of the titles of interest</small>
+					<small>For Trial request and pricing information please click <span id="sel">"Select"</span> next any of the titles of interest</small>
 				</div>
 			</div>
 			<table id="example" class="display " style="width:100%">
