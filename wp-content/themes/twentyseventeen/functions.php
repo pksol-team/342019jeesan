@@ -723,7 +723,7 @@ function get_sheet_data() {
 
 		if (in_array($products['E'], $vendor) && $products['F'] == $posted_subject) {
 			$table_data .= '
-			<tr>
+			<tr class="dynamic_data">
 				<td>'.$dataIndex.'</td>
 				<td>'.$products['E'].'</td>
 				<td>'.$products['C'].'</td>

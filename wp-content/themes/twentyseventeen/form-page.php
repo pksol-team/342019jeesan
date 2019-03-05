@@ -85,16 +85,21 @@ $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
 								</select>
 						  	</div>
 					</div>
-					<div class="form-group col-12 text-center">
+					<div class="form-group col-12 text-center button-search">
 						<input class="btn btn-primary" type="submit" value="Search">
 					</div>
 				</div>
+								
+				<div class="naseej-loader">
+					<div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+				</div>
+
 			</form>
 		</div>
 		<div class="filter_sheet_data">
 			<div class="row">
 				<div class="col-lg-12">
-					<small>For Trial request and pricing information please click <span id="sel">"Select"</span> next any of the titles of interest</small>
+					<small style="margin-bottom: 10px; display: block;">For Trial request and pricing information please click <span id="sel">"Select"</span> next any of the titles of interest</small>
 				</div>
 			</div>
 			<table id="example" class="display " style="width:100%">

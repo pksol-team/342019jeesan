@@ -95,7 +95,6 @@ textarea#notes:hover {
 .form-control {
     display: block;
     width: 100%;
-    height: calc(1.3em + .55rem + 0px) !important;
     padding: .375rem .75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -105,7 +104,7 @@ textarea#notes:hover {
     background-clip: padding-box;
     border: 1px solid #ced4da;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    box-shadow: 1px 3px #d6d0d0;
+    box-shadow: 1px 1px #d6d0d0;
 }
 
 p {
@@ -136,6 +135,7 @@ textarea {
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.current {
     color: #ab272c !important;
+    text-decoration: underline !important;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button {
@@ -161,5 +161,63 @@ textarea.form-control {
     height: 22px;
 }
 
+.filter_sheet_data {
+    display: none;
+}
 
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 22px;
+    height: 22px;
+}
 
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    margin: 6px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #000 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.naseej-loader, .filter_contactform {
+    display: none;
+}
+
+.button-search {
+    margin-bottom: 28px;
+}
+
+#example th {
+    padding: 8px 10px !important;
+}
+
+.dynamic_data:hover a#sel {
+    color: white;
+}
