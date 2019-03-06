@@ -113,7 +113,7 @@
 
 		ajaxurl = "<?= get_site_url(); ?>/" + 'wp-admin/admin-ajax.php';
 
-		$(document).ready(function () {
+		jQuery(document).ready(function ($) {
 
 			$('#countries, #subject').change(function (e) { 
 				e.preventDefault();
@@ -176,8 +176,6 @@
 				} else {
 					alert('Please Fill Country and Subject Properly');
 				}
-
-				
 				
 			});
 
@@ -197,7 +195,8 @@
 					var name = row.find('.product-name-row').text();
 					var deleteLink = '<a href="#" class="delete-row">Delete</a>';
 
-					var appendRow = '<tr class="selected_data_row_" style="display: none; " data-code="'+code+'"><td>'+code+'</td><td>'+vendor+'</td><td>'+name+'</td><td>'+deleteLink+'</td></tr>';
+					var appendRow = '<tr class="selected_data_row_" style="display: none; " data-code="'+code+'"><td>'+code+'<input type="hidden" name="selected_product_code[]" value="'+code+'"></td><td>'+vendor+'<input type="hidden" name="selected_product_vendor[]" value="'+vendor+'"></td><td>'+name+'<input type="hidden" name="selected_product_name[]" value="'+name+'"></td><td>'+deleteLink+'</td></tr>';
+
 					var appended_row = $(appendRow).appendTo('.selected_data table');
 					appended_row.fadeIn();
 					
@@ -207,9 +206,6 @@
 					});
 
 				}
-
-
-
 
 			});
 
@@ -243,6 +239,8 @@
 			});
 
 
+
+
 			$('#cancel-form').click(function (e) { 
 				e.preventDefault();
 
@@ -251,11 +249,50 @@
 
 			});
 
-			
+			$('.contact-form-naseej').submit(function (e) { 
+				e.preventDefault();
+				var $form = $(this);
 
+				var errors = 0;
+				$('.rrequired').each(function (index, el) {
+
+					var selff = $(el);
+					if (selff.val() == '') {
+						errors = 1;
+						
+					}
+				});
+
+				if (errors != 0) {
+					alert('Please Fill the Info that is red marked');
+				} else {
+					
+					var data = $form.serialize();
+    
+					var data2 = {
+						'action': 'mail_inquiry_data', 
+						'data': data
+					}
+    
+					$('#btnSubmit').html('Sending...').attr('disabled', 'disabled');
+    
+					$.post(ajaxurl, data2, function (response) {
+						
+						$('#btnSubmit').html('Sent');
+						$('.filter_search, .filter_sheet_data, .selected_data, .filter_contactform').slideUp();
+						$('<div class="alert alert-success">Thank you. Your form has been Submitted</div>').appendTo('.knowledge');
+
+					});
+
+
+
+				}
+			});
 
 
 		});
+
+		
 		
 
 	</script>

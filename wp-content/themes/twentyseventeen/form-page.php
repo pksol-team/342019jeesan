@@ -128,85 +128,86 @@ $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
 		    </table>
 		</div>
 
-		<div class="selected_data">
 
-			<br>
-			<h5>Selected Resources</h5>
+		<form class="contact-form-naseej">
+			<div class="selected_data">
 
-			<table class="display" style="width:100%">
-		        <thead>
-		        	<tr>
-			            <th scope="col">Code</th>
-			            <th scope="col">Vendor</th>
-			            <th scope="col">Product Name</th>
-			            <th scope="col">&nbsp;</th>
-		          </tr>
-						</thead>
+				<br>
+				<h5>Selected Resources</h5>
+
+				<table class="display" style="width:100%">
+							<thead>
+								<tr>
+										<th scope="col">Code</th>
+										<th scope="col">Vendor</th>
+										<th scope="col">Product Name</th>
+										<th scope="col">&nbsp;</th>
+								</tr>
+							</thead>
 
 
 
-				</table>
-		</div>
+					</table>
+			</div>
 
 
 		<div class="filter_contactform">
-			<form class="contact-form-naseej">
 				<div class="form-row">
 					<p>Please Fill in your details to send the request:</p>
 				    <div class="form-group col-lg-12">
 				    	<label for="name">Full Name <span class="required-field">*</span> </label>
-				      	<input type="name" class="form-control" id="name">
+				      	<input type="name" class="form-control rrequired" id="name" name="name">
 				    </div>
 				    <div class="form-group col-lg-6">
 				      	<label for="phone">Phone <span class="required-field">*</span> </label>
-				      	<input type="tel" class="form-control" id="phone">
+				      	<input type="tel" class="form-control rrequired" id="phone" name="phone">
 				    </div>
 				  <div class="form-group col-lg-6">
 				    	<label for="email">Email <span class="required-field">*</span> </label>
-				    	<input type="email" class="form-control" id="email">
+				    	<input type="email" class="form-control rrequired" id="email" name="email">
 				  </div>
 				  <div class="form-group col-lg-6">
 				    	<label for="institution">Institution <span class="required-field">*</span></label>
-				    	<input type="text" class="form-control" id="institution">
+				    	<input type="text" class="form-control rrequired" id="institution" name="institution">
 				  </div>
 				    <div class="form-group col-lg-6">
 					  	<div class="form-group">
 					    	<label for="country">Country <span class="required-field">*</span></label>
-					    	<select id="countries" class="form-control">
-								<option value="-1">-- Select --</option>
-								<option value="3">Saudi Arabia</option>
-								<option value="4">Bahrain</option>
-								<option value="5">Qatar</option>
-								<option value="6">United Arab Emirates</option>
-								<option value="7">Oman</option>
-								<option value="8">Sudan</option>
-								<option value="9">Lebanon</option>
-								<option value="10">Jordan</option>
-								<option value="11">Syria</option>
-								<option value="12">Egypt</option>
-								<option value="13">Iran</option>
-								<option value="14">Iraq</option>
-								<option value="15">Turkey</option>
-								<option value="16">Libya</option>
-								<option value="17">Morocco</option>
-								<option value="18">Tunisia</option>
-								<option value="19">Algeria</option>
-								<option value="20">Yemen</option>
-								<option value="21">Kuwait</option>
+					    	<select id="countries" class="form-control rrequired" name="countries">
+								<option value="">-- Select --</option>
+								<option value="Saudi Arabia">Saudi Arabia</option>
+								<option value="Bahrain">Bahrain</option>
+								<option value="Qatar">Qatar</option>
+								<option value="United Arab Emirates">United Arab Emirates</option>
+								<option value="Oman">Oman</option>
+								<option value="Sudan">Sudan</option>
+								<option value="Lebanon">Lebanon</option>
+								<option value="Jordan">Jordan</option>
+								<option value="Syria">Syria</option>
+								<option value="Egypt">Egypt</option>
+								<option value="Iran">Iran</option>
+								<option value="Iraq">Iraq</option>
+								<option value="Turkey">Turkey</option>
+								<option value="Libya">Libya</option>
+								<option value="Morocco">Morocco</option>
+								<option value="Tunisia">Tunisia</option>
+								<option value="Algeria">Algeria</option>
+								<option value="Yemen">Yemen</option>
+								<option value="Kuwait">Kuwait</option>
 							</select>
 					 	</div>
 					</div>
 				  <div class="form-group col-lg-12">
 				  		<label for="notes">Notes</label>
-				    	<textarea id="notes" class="form-control"></textarea>
+				    	<textarea id="notes" name="notes" class="form-control"></textarea>
 				  </div>
-				  	<button type="submit" class="btn btn-primary">Send Request</button>
+				  	<button type="submit" id="btnSubmit" class="btn btn-primary">Send Request</button>
 				  	<button type="button" id="cancel-form" class="btn btn-primary">Cancel</button>
-
 				  </div>
-				</form>
 		</div>
+		</form>
 	</div>
+
 		<?php
 get_footer();
 		?>

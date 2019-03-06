@@ -740,6 +740,72 @@ function get_sheet_data() {
 
 }
 
+add_action( 'wp_ajax_nopriv_mail_inquiry_data', 'mail_inquiry_data' );
+add_action( 'wp_ajax_mail_inquiry_data', 'mail_inquiry_data' );
+
+function mail_inquiry_data() { 
+
+	$data = $_POST['data'];
+	parse_str($data, $output);
+
+	$email_template = '
+
+	<h4 style="text-align: left; font-family: arial; padding-bottom: 7px; margin-bottom: 16px; border-bottom: 1px solid #ddd;">User Data</h4>
+	<p style="font-family: arial; font-size: 13px; "> <strong>Fullname:</strong> '.$output['name'].' </p>
+	<p style="font-family: arial; font-size: 13px; "> <strong>Email:</strong> '.$output['email'].' </p>
+	<p style="font-family: arial; font-size: 13px; "> <strong>Phone:</strong> '.$output['phone'].' </p>
+	<p style="font-family: arial; font-size: 13px; "> <strong>Institution:</strong> '.$output['institution'].' </p>
+	<p style="font-family: arial; font-size: 13px; "> <strong>Country:</strong> '.$output['countries'].' </p>
+	<p style="font-family: arial; font-size: 13px; "> <strong>Notes:</strong> '.$output['notes'].' </p>
+	
+		<table style="width: 70%;">
+
+		<tr>
+			<th colspan="4">
+				&nbsp;
+			</th>
+		</tr>
+
+		<tr>
+			<th colspan="6"><h4 style="text-align: left; font-family: arial; padding-bottom: 7px; margin-bottom: 16px; border-bottom: 1px solid #ddd;">Selected Resources</h4></th>
+		</tr>
+		
+		<tr>
+			<th align="left" style="font-family: arial; font-size: 13px; border: 1px solid #e2e2e2; padding: 10px;">Code</th>
+			<th align="left" style="font-family: arial; font-size: 13px; border: 1px solid #e2e2e2; padding: 10px;">Vendor</th>
+			<th align="left" style="font-family: arial; font-size: 13px; border: 1px solid #e2e2e2; padding: 10px;">Product Name</th>
+		</tr>
+		
+		';
+
+		$indexx = 0;
+		foreach ($output['selected_product_code'] as $key => $code) {
+
+			$email_template .= '
+			<tr>
+				<td align="left" style="font-family: arial; font-size: 13px; border: 1px solid #e2e2e2; padding: 10px;">'.$output['selected_product_code'][$indexx].'</td>
+				<td align="left" style="font-family: arial; font-size: 13px; border: 1px solid #e2e2e2; padding: 10px;">'.$output['selected_product_vendor'][$indexx].'</td>
+				<td align="left" style="font-family: arial; font-size: 13px; border: 1px solid #e2e2e2; padding: 10px;">'.$output['selected_product_name'][$indexx].'</td>
+			</tr>';
+			$indexx++;
+
+		}
+
+	$email_template .= '</table>';
+
+	$to = 'ahmad.mohhamed.93@gmail.com';  // bloginfo('admin_email');
+	$subject = 'Naseej Database';
+	$body = $email_template;
+	$headers = array('Content-Type: text/html; charset=UTF-8');
+
+	wp_mail( $to, $subject, $body, $headers );
+
+	// echo $email_template;
+
+	die();
+
+}
+
 
 
 
