@@ -239,8 +239,6 @@
 			});
 
 
-
-
 			$('#cancel-form').click(function (e) { 
 				e.preventDefault();
 
